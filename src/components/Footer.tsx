@@ -37,7 +37,7 @@ export default function Footer({ isDarkMode }: FooterProps) {
 
         {/* Middle: Brief message/ethos */}
         <p className="font-mono text-[9px] text-zinc-400/60 uppercase tracking-widest flex items-center space-x-1">
-          <Sparkles className="h-3 w-3 text-indigo-500" />
+          <Sparkles className="h-3 w-3 text-brand-primary" />
           <span>Obsessing Over Tiny Pixels</span>
         </p>
 

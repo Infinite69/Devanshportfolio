@@ -79,10 +79,10 @@ export default function Contact({ isDarkMode }: ContactProps) {
         <div className={`rounded-2xl p-6 sm:p-8 border flex flex-col justify-between ${bgStyle}`}>
           <div className="space-y-6">
             <div>
-              <h3 className="font-display font-bold text-xl text-zinc-900 dark:text-zinc-100">
+              <h3 className="font-display font-bold text-xl text-zinc-950 dark:text-zinc-100">
                 Get in Touch
               </h3>
-              <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">
+              <p className="text-xs text-zinc-800 dark:text-zinc-400 mt-1">
                 Choose your preferred method to connect and let's discuss your project.
               </p>
             </div>
@@ -97,15 +97,15 @@ export default function Contact({ isDarkMode }: ContactProps) {
                 className="flex items-center justify-between p-3.5 rounded-xl border border-zinc-100 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 transition-all group cursor-pointer bg-zinc-50/20 dark:bg-zinc-900/10"
               >
                 <div className="flex items-start space-x-3">
-                  <Calendar className="h-4.5 w-4.5 text-zinc-400 mt-0.5" />
+                  <Calendar className="h-4.5 w-4.5 text-zinc-500 dark:text-zinc-450 mt-0.5" />
                   <div>
-                    <h4 className="text-xs sm:text-sm font-bold text-zinc-850 dark:text-zinc-200 group-hover:text-indigo-500 transition-colors">
+                    <h4 className="text-xs sm:text-sm font-bold text-zinc-850 dark:text-zinc-200 group-hover:text-brand-primary transition-colors">
                       Schedule a free call
                     </h4>
-                    <p className="text-[10px] text-zinc-400 mt-0.5">30-minute strategy session</p>
+                    <p className="text-[10px] text-zinc-600 dark:text-zinc-400 mt-0.5">30-minute strategy session</p>
                   </div>
                 </div>
-                <ArrowUpRight className="h-4 w-4 text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors" />
+                <ArrowUpRight className="h-4 w-4 text-zinc-500 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors" />
               </a>
 
               <a 
@@ -113,15 +113,15 @@ export default function Contact({ isDarkMode }: ContactProps) {
                 className="flex items-center justify-between p-3.5 rounded-xl border border-zinc-100 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 transition-all group cursor-pointer bg-zinc-50/20 dark:bg-zinc-900/10"
               >
                 <div className="flex items-start space-x-3">
-                  <Mail className="h-4.5 w-4.5 text-zinc-400 mt-0.5" />
+                  <Mail className="h-4.5 w-4.5 text-zinc-500 dark:text-zinc-450 mt-0.5" />
                   <div>
-                    <h4 className="text-xs sm:text-sm font-bold text-zinc-850 dark:text-zinc-200 group-hover:text-indigo-500 transition-colors select-text">
+                    <h4 className="text-xs sm:text-sm font-bold text-zinc-850 dark:text-zinc-200 group-hover:text-brand-primary transition-colors select-text">
                       devanshd134@gmail.com
                     </h4>
-                    <p className="text-[10px] text-zinc-400 mt-0.5">Quick inquiries & questions</p>
+                    <p className="text-[10px] text-zinc-600 dark:text-zinc-400 mt-0.5">Quick inquiries & questions</p>
                   </div>
                 </div>
-                <ArrowUpRight className="h-4 w-4 text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors" />
+                <ArrowUpRight className="h-4 w-4 text-zinc-500 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors" />
               </a>
 
               <a 
@@ -131,15 +131,15 @@ export default function Contact({ isDarkMode }: ContactProps) {
                 className="flex items-center justify-between p-3.5 rounded-xl border border-zinc-100 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 transition-all group cursor-pointer bg-zinc-50/20 dark:bg-zinc-900/10"
               >
                 <div className="flex items-start space-x-3">
-                  <Linkedin className="h-4.5 w-4.5 text-zinc-400 mt-0.5" />
+                  <Linkedin className="h-4.5 w-4.5 text-zinc-500 dark:text-zinc-450 mt-0.5" />
                   <div>
-                    <h4 className="text-xs sm:text-sm font-bold text-zinc-850 dark:text-zinc-200 group-hover:text-indigo-500 transition-colors">
+                    <h4 className="text-xs sm:text-sm font-bold text-zinc-850 dark:text-zinc-200 group-hover:text-brand-primary transition-colors">
                       Connect on Linkedin
                     </h4>
-                    <p className="text-[10px] text-zinc-400 mt-0.5">Follow for updates & insights</p>
+                    <p className="text-[10px] text-zinc-600 dark:text-zinc-400 mt-0.5">Follow for updates & insights</p>
                   </div>
                 </div>
-                <ArrowUpRight className="h-4 w-4 text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors" />
+                <ArrowUpRight className="h-4 w-4 text-zinc-500 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors" />
               </a>
 
             </div>
@@ -147,11 +147,11 @@ export default function Contact({ isDarkMode }: ContactProps) {
 
           {/* Core Response SLA */}
           <div className="mt-8 pt-4 border-t border-zinc-200/50 dark:border-zinc-800/30 space-y-2">
-            <div className="flex items-center space-x-2 text-[10px] text-zinc-400 dark:text-zinc-500 font-mono">
+            <div className="flex items-center space-x-2 text-[10px] text-zinc-600 dark:text-zinc-400 font-mono">
               <Clock className="h-3.5 w-3.5" />
               <span>REPLIES WITHIN 24 HOURS</span>
             </div>
-            <div className="flex items-center space-x-2 text-[10px] text-zinc-400 dark:text-zinc-500 font-mono">
+            <div className="flex items-center space-x-2 text-[10px] text-zinc-600 dark:text-zinc-400 font-mono">
               <CheckCircle2 className="h-3.5 w-3.5" />
               <span>OPEN TO REMOTE, FREELANCE & FULL-TIME</span>
             </div>
@@ -162,10 +162,10 @@ export default function Contact({ isDarkMode }: ContactProps) {
         <div className={`rounded-2xl p-6 sm:p-8 border flex flex-col justify-between ${bgStyle}`}>
           <div className="space-y-6 w-full">
             <div>
-              <h3 className="font-display font-bold text-xl text-zinc-900 dark:text-zinc-100">
+              <h3 className="font-display font-bold text-xl text-zinc-950 dark:text-zinc-100">
                 Send a Message
               </h3>
-              <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">
+              <p className="text-xs text-zinc-800 dark:text-zinc-400 mt-1">
                 Prefer to write? Fill out the form and I'll get back to you within 24 hours.
               </p>
             </div>
@@ -225,12 +225,12 @@ export default function Contact({ isDarkMode }: ContactProps) {
         
         {/* Left Side: Charles Eames Quote */}
         <div className="flex-1 flex items-start space-x-3.5 text-left md:pr-6">
-          <Quote className="h-6 w-6 text-zinc-300 dark:text-zinc-700 mt-0.5 shrink-0" />
+          <Quote className="h-6 w-6 text-zinc-400 dark:text-zinc-650 mt-0.5 shrink-0" />
           <div className="space-y-2">
-            <p className="text-xs sm:text-sm italic text-zinc-600 dark:text-zinc-300 leading-relaxed font-sans select-text">
+            <p className="text-xs sm:text-sm italic text-zinc-800 dark:text-zinc-300 leading-relaxed font-sans select-text">
               "The details are not the details. They make the design."
             </p>
-            <div className="text-[10px] font-mono text-zinc-400 dark:text-zinc-500">
+            <div className="text-[10px] font-mono text-zinc-600 dark:text-zinc-400">
               — Charles Eames
             </div>
           </div>
@@ -238,8 +238,8 @@ export default function Contact({ isDarkMode }: ContactProps) {
 
         {/* Right Side: Visitor Counter */}
         <div className="flex items-center justify-start md:justify-end md:pl-6 border-t md:border-t-0 md:border-l border-zinc-200/50 dark:border-zinc-800/30 pt-6 md:pt-0 shrink-0 select-none">
-          <div className="text-left font-sans text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
-            You are the <span className="font-extrabold text-zinc-800 dark:text-zinc-100 text-sm font-mono">{visitorCount.toLocaleString()}</span>
+          <div className="text-left font-sans text-xs text-zinc-700 dark:text-zinc-400 leading-relaxed">
+            You are the <span className="font-extrabold text-zinc-950 dark:text-zinc-100 text-sm font-mono">{visitorCount.toLocaleString()}</span>
             <sup className="text-[10px] font-mono lowercase">{getOrdinalSuffix(visitorCount)}</sup> visitor
           </div>
         </div>

@@ -63,30 +63,30 @@ export default function Experience({ isDarkMode }: ExperienceProps) {
               {/* Title & Date alignment row */}
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-2">
                 <div>
-                  <h3 className="text-base sm:text-lg font-bold font-display text-zinc-900 dark:text-zinc-100 leading-snug">
-                    {exp.role} <span className="text-zinc-400 dark:text-zinc-500 font-normal">· {exp.company}</span>
+                  <h3 className="text-base sm:text-lg font-bold font-display text-zinc-950 dark:text-zinc-100 leading-snug">
+                    {exp.role} <span className="text-zinc-600 dark:text-zinc-400 font-normal">· {exp.company}</span>
                   </h3>
-                  <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-0.5">
+                  <p className="text-xs text-zinc-700 dark:text-zinc-400 mt-0.5">
                     Remote, Full-Time
                   </p>
                 </div>
                 
                 {/* Period aligned to right */}
-                <span className="text-xs font-mono text-zinc-400 dark:text-zinc-500 whitespace-nowrap self-start sm:self-center">
+                <span className="text-xs font-mono text-zinc-600 dark:text-zinc-400 whitespace-nowrap self-start sm:self-center">
                   {exp.period}
                 </span>
               </div>
 
               {/* Work highlights list */}
               <div className="space-y-2 mt-4">
-                <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-300 font-sans leading-relaxed">
+                <p className="text-xs sm:text-sm text-zinc-800 dark:text-zinc-300 font-sans leading-relaxed">
                   During my time at {exp.company}, I actively spearheaded digital enhancements and modern interfaces:
                 </p>
                 
                 <ul className="space-y-1.5 pl-1">
                   {exp.highlights.map((highlight, hIdx) => (
-                    <li key={hIdx} className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed font-sans flex items-start space-x-2">
-                      <span className="text-zinc-400 dark:text-zinc-600 mt-0.5 select-none">•</span>
+                    <li key={hIdx} className="text-xs sm:text-sm text-zinc-800 dark:text-zinc-400 leading-relaxed font-sans flex items-start space-x-2">
+                      <span className="text-zinc-650 dark:text-zinc-500 mt-0.5 select-none">•</span>
                       <span>{highlight}</span>
                     </li>
                   ))}

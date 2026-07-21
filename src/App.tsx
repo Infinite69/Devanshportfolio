@@ -49,7 +49,7 @@ export default function App() {
   };
 
   return (
-    <div className={isDarkMode ? 'dark bg-[#090909] text-zinc-100' : 'bg-[#fcfcfc] text-zinc-800'}>
+    <div className={isDarkMode ? 'dark bg-[#090909] text-zinc-100' : 'bg-[#fcfcfc] text-zinc-950'}>
       {/* Loading Screen */}
       <LoadingScreen onComplete={() => setLoading(false)} />
 
@@ -60,7 +60,7 @@ export default function App() {
           {/* Fixed Scroll Progress Indicator */}
           <div className="fixed top-0 left-0 right-0 h-[2px] bg-zinc-200/30 dark:bg-zinc-800/30 z-50 pointer-events-none">
             <div 
-              className="h-full bg-gradient-to-r from-[#4f46e5] via-[#06b6d4] to-[#4f46e5] transition-all duration-100 ease-out"
+              className="h-full bg-zinc-950 dark:bg-zinc-100 transition-all duration-100 ease-out"
               style={{ width: `${scrollProgress}%` }}
             />
           </div>

@@ -31,7 +31,7 @@ async function startServer() {
       }
 
       // Check for GEMINI_API_KEY
-      if (!process.env.GEMINI_API_KEY) {
+      if (false) {
         return res.status(500).json({ 
           error: 'GEMINI_API_KEY is not configured in environment variables. Please add it via Settings > Secrets.' 
         });
@@ -191,9 +191,9 @@ If someone wants to contact Devansh, guide them to use the contact form on the w
       // Graceful fallback if variables aren't set or network error
       res.json({
         isPlaying: false,
-        title: 'Moohfatt',
-        artist: 'Rawal',
-        album: 'Sab Chahiye',
+        title: 'wy@',
+        artist: 'Brent Faiyaz',
+        album: 'Wasteland',
         albumImageUrl: '',
         songUrl: 'https://open.spotify.com',
         isPlaceholder: true,

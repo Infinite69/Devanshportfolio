@@ -1,18 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 @import "tailwindcss";
 
+:root {
+  --brand-bg: #fcfcfc;
+  --brand-card: #ffffff;
+  --brand-border: rgba(9, 9, 9, 0.08);
+  --brand-primary: #000000;
+  --brand-secondary: #27272a;
+  --brand-text: #090909;
+  --brand-muted: #71717a;
+  
+  --grid-color: rgba(9, 9, 9, 0.03);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(9, 9, 9, 0.08);
+  --selection-bg: rgba(9, 9, 9, 0.1);
+  --shimmer-bg: linear-gradient(
+    to right,
+    rgba(9, 9, 9, 0.08),
+    rgba(9, 9, 9, 0.2),
+    rgba(9, 9, 9, 0.2),
+    rgba(9, 9, 9, 0.08)
+  );
+}
+
+.dark {
+  --brand-bg: #090909;
+  --brand-card: #111111;
+  --brand-border: rgba(255, 255, 255, 0.08);
+  --brand-primary: #ffffff;
+  --brand-secondary: #e4e4e7;
+  --brand-text: #ffffff;
+  --brand-muted: #a1a1aa;
+  
+  --grid-color: rgba(255, 255, 255, 0.015);
+  --glass-bg: rgba(17, 17, 17, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --selection-bg: rgba(255, 255, 255, 0.15);
+  --shimmer-bg: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.08)
+  );
+}
+
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Space Grotesk", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 
-  --color-brand-bg: #090909;
-  --color-brand-card: #111111;
-  --color-brand-border: rgba(255, 255, 255, 0.08);
-  --color-brand-primary: #7C3AED;
-  --color-brand-secondary: #3B82F6;
-  --color-brand-text: #FFFFFF;
-  --color-brand-muted: #A1A1AA;
+  --color-brand-bg: var(--brand-bg);
+  --color-brand-card: var(--brand-card);
+  --color-brand-border: var(--brand-border);
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-brand-text: var(--brand-text);
+  --color-brand-muted: var(--brand-muted);
 }
 
 /* Custom Scrollbar */
@@ -22,16 +66,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #090909;
+  background: var(--brand-bg);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1c1c1e;
+  background: var(--brand-border);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #2c2c2e;
+  background: var(--brand-muted);
 }
 
 /* Smooth Scrolling */
@@ -41,8 +85,8 @@ html {
 }
 
 body {
-  background-color: #090909;
-  color: #FFFFFF;
+  background-color: var(--brand-bg);
+  color: var(--brand-text);
   font-family: var(--font-sans);
   overflow-x: hidden;
 }
@@ -56,40 +100,40 @@ body {
 
 /* Glassmorphism Panel */
 .glass-panel {
-  background: rgba(17, 17, 17, 0.7);
+  background: var(--glass-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--glass-border);
 }
 
 .glass-panel-light {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--glass-bg);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--glass-border);
 }
 
 /* Background grid */
 .bg-grid-subtle {
   background-size: 32px 32px;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
 }
 
 /* Glow effects */
 .glow-purple {
-  filter: drop-shadow(0 0 15px rgba(124, 58, 237, 0.25));
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.05));
 }
 
 .glow-blue {
-  filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.25));
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.05));
 }
 
 /* Custom Selection */
 ::selection {
-  background: rgba(124, 58, 237, 0.3);
-  color: #ffffff;
+  background: var(--selection-bg);
+  color: var(--brand-text);
 }
 
 /* Animations */
@@ -141,13 +185,7 @@ body {
   inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.08),
-    rgba(124, 58, 237, 0.3),
-    rgba(59, 130, 246, 0.3),
-    rgba(255, 255, 255, 0.08)
-  );
+  background: var(--shimmer-bg);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;

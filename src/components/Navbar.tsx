@@ -74,7 +74,7 @@ export default function Navbar({ onOpenCmd, onToggleTheme, isDarkMode }: NavbarP
             onClick={() => handleNavClick('home')}
             className={`flex items-center space-x-1 font-display font-extrabold text-base tracking-tight cursor-pointer select-none ${textClass}`}
           >
-            Devansh<span className="text-indigo-500">.</span>
+            Devansh<span className="text-brand-primary">.</span>
           </button>
 
           {/* Desktop Navigation Items */}
@@ -172,7 +172,7 @@ export default function Navbar({ onOpenCmd, onToggleTheme, isDarkMode }: NavbarP
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.05 }}
                     onClick={() => handleNavClick(item.id)}
-                    className={`text-left text-sm font-medium tracking-wide py-1 border-b border-zinc-100 dark:border-zinc-800 ${isActive ? 'text-indigo-500' : 'text-zinc-500'
+                    className={`text-left text-sm font-medium tracking-wide py-1 border-b border-zinc-100 dark:border-zinc-800 ${isActive ? 'text-brand-primary' : 'text-zinc-500'
                       }`}
                   >
                     {item.label}

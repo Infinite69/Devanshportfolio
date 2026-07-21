@@ -30,7 +30,7 @@ export default function EducationCertifications({ isDarkMode }: EducationCertifi
           >
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
-                <div className="p-2 rounded-xl bg-indigo-500/10 text-indigo-500">
+                <div className="p-2 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100">
                   <GraduationCap className="h-5 w-5" />
                 </div>
                 <div>
@@ -72,7 +72,7 @@ export default function EducationCertifications({ isDarkMode }: EducationCertifi
           >
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
-                <div className="p-2 rounded-xl bg-indigo-500/10 text-indigo-500">
+                <div className="p-2 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100">
                   <GraduationCap className="h-5 w-5" />
                 </div>
                 <div>
@@ -106,7 +106,7 @@ export default function EducationCertifications({ isDarkMode }: EducationCertifi
         {/* Right Column: Certifications lists */}
         <div className="space-y-3">
           <h4 className="font-mono text-[10px] text-zinc-400 dark:text-zinc-500 uppercase tracking-wider flex items-center space-x-1.5 mb-1">
-            <Award className="h-4 w-4 text-indigo-500" />
+            <Award className="h-4 w-4 text-zinc-900 dark:text-zinc-100" />
             <span>Verified Udemy Certifications</span>
           </h4>
 
@@ -125,7 +125,7 @@ export default function EducationCertifications({ isDarkMode }: EducationCertifi
                 }`}
               >
                 <div className="flex items-center space-x-2.5">
-                  <span className="h-1.5 w-1.5 rounded-full bg-indigo-500" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-zinc-900 dark:bg-zinc-100" />
                   <div>
                     <h4 className="font-display font-semibold text-xs text-zinc-800 dark:text-zinc-200">
                       {cert.title}

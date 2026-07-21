@@ -119,7 +119,7 @@ export default function AIChatbot({ isDarkMode }: AIChatbotProps) {
           className={`relative p-4 rounded-full shadow-2xl flex items-center justify-center cursor-pointer transition-colors duration-300 group ${
             isOpen 
               ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-950 border border-zinc-800 dark:border-zinc-200'
-              : 'bg-indigo-600 text-white hover:bg-indigo-500 shadow-indigo-600/35'
+              : 'bg-zinc-950 text-white hover:bg-zinc-900 dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-100 shadow-zinc-950/20'
           }`}
           title="Chat with AI"
         >
@@ -156,13 +156,13 @@ export default function AIChatbot({ isDarkMode }: AIChatbotProps) {
               isDarkMode ? 'border-zinc-900 bg-[#121215]/80' : 'border-zinc-100 bg-zinc-50'
             }`}>
               <div className="flex items-center space-x-2.5 text-left">
-                <div className="h-8 w-8 rounded-lg bg-indigo-500/10 text-indigo-500 flex items-center justify-center">
+                <div className="h-8 w-8 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 flex items-center justify-center">
                   <Bot className="h-4.5 w-4.5" />
                 </div>
                 <div>
                   <div className="text-sm font-semibold tracking-wide flex items-center space-x-1.5">
                     <span>Devansh AI</span>
-                    <Sparkles className="h-3 w-3 text-indigo-500 animate-pulse" />
+                    <Sparkles className="h-3 w-3 text-zinc-900 dark:text-zinc-100 animate-pulse" />
                   </div>
                   <div className="text-[10px] text-emerald-500 font-mono flex items-center space-x-1">
                     <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 inline-block animate-pulse"></span>
@@ -198,13 +198,13 @@ export default function AIChatbot({ isDarkMode }: AIChatbotProps) {
                   className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'} items-start space-x-2.5`}
                 >
                   {msg.role === 'model' && (
-                    <div className="h-6 w-6 rounded bg-indigo-500/10 text-indigo-500 flex items-center justify-center shrink-0 mt-0.5">
+                    <div className="h-6 w-6 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 flex items-center justify-center shrink-0 mt-0.5">
                       <Bot className="h-3.5 w-3.5" />
                     </div>
                   )}
                   <div className={`max-w-[80%] rounded-2xl px-3.5 py-2.5 leading-relaxed text-left whitespace-pre-wrap ${
                     msg.role === 'user'
-                      ? 'bg-indigo-600 text-white rounded-tr-none'
+                      ? 'bg-zinc-950 text-white dark:bg-zinc-800 dark:text-zinc-100 rounded-tr-none'
                       : isDarkMode 
                         ? 'bg-[#18181b] border border-zinc-800 text-zinc-300 rounded-tl-none' 
                         : 'bg-zinc-100 text-zinc-800 rounded-tl-none'
@@ -221,7 +221,7 @@ export default function AIChatbot({ isDarkMode }: AIChatbotProps) {
 
               {isLoading && (
                 <div className="flex justify-start items-start space-x-2.5">
-                  <div className="h-6 w-6 rounded bg-indigo-500/10 text-indigo-500 flex items-center justify-center shrink-0 mt-0.5">
+                  <div className="h-6 w-6 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 flex items-center justify-center shrink-0 mt-0.5">
                     <Bot className="h-3.5 w-3.5 animate-bounce" />
                   </div>
                   <div className={`rounded-2xl px-3.5 py-2.5 rounded-tl-none ${
@@ -282,7 +282,7 @@ export default function AIChatbot({ isDarkMode }: AIChatbotProps) {
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Ask me anything..."
                 disabled={isLoading}
-                className={`flex-1 px-3 py-2 text-xs rounded-xl border focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 transition-colors ${
+                className={`flex-1 px-3 py-2 text-xs rounded-xl border focus:outline-none focus:ring-1 focus:ring-zinc-950 focus:border-zinc-950 dark:focus:ring-zinc-100 dark:focus:border-zinc-100 transition-colors ${
                   isDarkMode 
                     ? 'bg-zinc-900 border-zinc-800 text-zinc-100 placeholder-zinc-500' 
                     : 'bg-white border-zinc-200 text-zinc-900 placeholder-zinc-400'
@@ -293,7 +293,7 @@ export default function AIChatbot({ isDarkMode }: AIChatbotProps) {
                 disabled={!input.trim() || isLoading}
                 className={`p-2.5 rounded-xl flex items-center justify-center cursor-pointer transition-all ${
                   input.trim() && !isLoading
-                    ? 'bg-indigo-600 text-white hover:bg-indigo-500'
+                    ? 'bg-zinc-950 text-white hover:bg-zinc-900 dark:bg-zinc-100 dark:text-zinc-950 dark:hover:bg-zinc-200'
                     : 'bg-zinc-200 dark:bg-zinc-800 text-zinc-400 cursor-not-allowed'
                 }`}
               >

@@ -28,7 +28,7 @@ export default function Projects({ isDarkMode }: ProjectsProps) {
           <div className={`absolute inset-0 flex flex-col justify-between p-4 font-sans select-none overflow-hidden rounded-xl border ${bgStyle}`}>
             <div className="flex items-center justify-between border-b border-zinc-200/20 dark:border-zinc-800/20 pb-2">
               <span className={`font-mono text-[9px] tracking-wider ${labelStyle}`}>PREVIEW • INTERIOR.AI</span>
-              <span className="text-[9px] bg-indigo-500/10 text-indigo-500 border border-indigo-500/20 px-1.5 py-0.5 rounded uppercase">React</span>
+              <span className="text-[9px] bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 border border-zinc-200/50 dark:border-zinc-700/50 px-1.5 py-0.5 rounded uppercase">React</span>
             </div>
 
             <div className="flex-1 flex items-center justify-center relative my-2">
@@ -92,7 +92,7 @@ export default function Projects({ isDarkMode }: ProjectsProps) {
                 .map((emp, i) => (
                   <div key={i} className={`flex items-center justify-between p-1.5 rounded border text-left ${isDarkMode ? 'bg-zinc-800/30 border-zinc-800' : 'bg-zinc-50 border-zinc-200'}`}>
                     <div className="flex items-center space-x-2">
-                      <span className="h-4.5 w-4.5 rounded-full bg-indigo-500/20 text-indigo-500 text-[8px] flex items-center justify-center font-bold">
+                      <span className="h-4.5 w-4.5 rounded-full bg-zinc-200 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 text-[8px] flex items-center justify-center font-bold">
                         {emp.name[0]}
                       </span>
                       <div>
@@ -161,7 +161,7 @@ export default function Projects({ isDarkMode }: ProjectsProps) {
                   e.stopPropagation();
                   setBaxySpeed(Number(e.target.value));
                 }}
-                className="w-16 h-1 accent-indigo-500 cursor-pointer bg-zinc-200 dark:bg-zinc-800 rounded-full"
+                className="w-16 h-1 accent-zinc-900 dark:accent-zinc-100 cursor-pointer bg-zinc-200 dark:bg-zinc-800 rounded-full"
               />
             </div>
           </div>
@@ -172,7 +172,7 @@ export default function Projects({ isDarkMode }: ProjectsProps) {
           <div className={`absolute inset-0 flex flex-col justify-between p-4 font-sans select-none overflow-hidden rounded-xl border ${bgStyle}`}>
             <div className="flex items-center justify-between border-b border-zinc-200/20 dark:border-zinc-800/20 pb-2">
               <span className={`font-mono text-[9px] tracking-wider ${labelStyle}`}>SK CATALOGUE</span>
-              <span className="text-[9px] bg-indigo-500/10 text-indigo-500 border border-indigo-500/20 px-1.5 py-0.5 rounded uppercase">Luxury</span>
+              <span className="text-[9px] bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 border border-zinc-200/50 dark:border-zinc-700/50 px-1.5 py-0.5 rounded uppercase">Luxury</span>
             </div>
 
             <div className="flex-1 flex items-center justify-center my-2 relative">
@@ -206,7 +206,7 @@ export default function Projects({ isDarkMode }: ProjectsProps) {
                     }}
                     className={`text-[8px] px-1.5 py-0.5 rounded border cursor-pointer transition-all ${
                       textureFinish === swatch 
-                        ? 'border-indigo-500 text-indigo-500 bg-indigo-500/5' 
+                        ? 'border-zinc-900 dark:border-zinc-100 text-zinc-900 dark:text-zinc-100 bg-zinc-900/5 dark:bg-zinc-100/5' 
                         : 'border-zinc-200 dark:border-zinc-800 text-zinc-400 hover:text-zinc-600'
                     }`}
                   >
@@ -288,18 +288,18 @@ export default function Projects({ isDarkMode }: ProjectsProps) {
                     {project.tech.slice(0, 3).map(t => (
                       <span 
                         key={t}
-                        className="px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-900 text-zinc-500 dark:text-zinc-400 font-mono text-[9px] uppercase tracking-wider"
+                        className="px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400 font-mono text-[9px] uppercase tracking-wider"
                       >
                         {t}
                       </span>
                     ))}
                   </div>
 
-                  <h3 className="text-base sm:text-lg font-bold font-display text-zinc-900 dark:text-zinc-100">
+                  <h3 className="text-base sm:text-lg font-bold font-display text-zinc-950 dark:text-zinc-100">
                     {project.title}
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed font-sans">
+                  <p className="text-xs sm:text-sm text-zinc-800 dark:text-zinc-400 leading-relaxed font-sans">
                     {project.description}
                   </p>
 
@@ -310,7 +310,7 @@ export default function Projects({ isDarkMode }: ProjectsProps) {
                         href={project.github}
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex items-center space-x-1 text-xs text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors font-mono"
+                        className="inline-flex items-center space-x-1 text-xs text-zinc-600 hover:text-zinc-950 dark:hover:text-white transition-colors font-mono"
                       >
                         <span>Source Code</span>
                         <ArrowUpRight className="h-3 w-3" />
@@ -321,7 +321,7 @@ export default function Projects({ isDarkMode }: ProjectsProps) {
                         href={project.live}
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex items-center space-x-1 text-xs text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors font-mono"
+                        className="inline-flex items-center space-x-1 text-xs text-zinc-600 hover:text-zinc-950 dark:hover:text-white transition-colors font-mono"
                       >
                         <span>Live Preview</span>
                         <ArrowUpRight className="h-3 w-3" />

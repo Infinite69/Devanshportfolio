@@ -115,11 +115,12 @@ export default function CustomCursor() {
       if (ringRef.current) {
         ringRef.current.style.transform = `translate3d(${ringCoords.current.x}px, ${ringCoords.current.y}px, 0) translate(-50%, -50%) scale(${ringScale.current})`;
         // Toggle active border styling dynamically via JS
+        const isDark = document.documentElement.classList.contains('dark');
         if (isHovered.current) {
-          ringRef.current.style.borderColor = 'rgba(79, 70, 229, 0.8)';
-          ringRef.current.style.backgroundColor = 'rgba(79, 70, 229, 0.08)';
+          ringRef.current.style.borderColor = isDark ? 'rgba(255, 255, 255, 0.8)' : 'rgba(9, 9, 9, 0.8)';
+          ringRef.current.style.backgroundColor = isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(9, 9, 9, 0.08)';
         } else {
-          ringRef.current.style.borderColor = 'rgba(79, 70, 229, 0.35)';
+          ringRef.current.style.borderColor = isDark ? 'rgba(255, 255, 255, 0.35)' : 'rgba(9, 9, 9, 0.35)';
           ringRef.current.style.backgroundColor = 'transparent';
         }
       }
@@ -150,13 +151,13 @@ export default function CustomCursor() {
       {/* Inner Dot Indicator */}
       <div
         ref={dotRef}
-        className="pointer-events-none fixed top-0 left-0 z-50 h-2.5 w-2.5 rounded-full bg-indigo-500 mix-blend-normal md:block hidden will-change-transform shadow-sm shadow-indigo-500/20"
+        className="pointer-events-none fixed top-0 left-0 z-50 h-2.5 w-2.5 rounded-full bg-zinc-950 dark:bg-white mix-blend-normal md:block hidden will-change-transform shadow-sm shadow-zinc-950/20 dark:shadow-white/20"
       />
 
       {/* Outer Magnetic/Trailing Ring */}
       <div
         ref={ringRef}
-        className="pointer-events-none fixed top-0 left-0 z-50 h-8 w-8 rounded-full border border-indigo-500/35 transition-colors duration-250 ease-out md:block hidden will-change-transform"
+        className="pointer-events-none fixed top-0 left-0 z-50 h-8 w-8 rounded-full border border-zinc-900/35 dark:border-white/35 transition-colors duration-250 ease-out md:block hidden will-change-transform"
       />
     </>
   );
