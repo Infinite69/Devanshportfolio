@@ -71,15 +71,9 @@ async function getNowPlaying() {
     },
   });
 
-  console.log("Status:", response.status);
-
-const text = await response.text();
-console.log(text);
-
-return {
-  status: response.status,
-  response: text,
-};
+  if (response.status === 204 || response.status > 400) {
+    return getRecentlyPlayed(accessToken);
+  }
 
   const song: any = await response.json();
   if (!song || !song.item) {
