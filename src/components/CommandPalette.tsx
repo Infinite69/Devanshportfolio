@@ -47,7 +47,7 @@ export default function CommandPalette({ isOpen, onClose, onToggleTheme }: Comma
     { id: 'sec-contact', label: 'Go to Contact', category: 'Navigation', icon: Hash, action: () => scrollToSection('contact') },
     
     { id: 'theme-toggle', label: 'Toggle High Contrast Neon Theme', category: 'Preferences', icon: Sparkles, action: onToggleTheme },
-    { id: 'download-resume', label: 'Download Resume (PDF)', category: 'Documents', icon: FileText, action: () => window.open('#', '_blank') },
+    { id: 'download-resume', label: 'Download Resume (PDF)', category: 'Documents', icon: FileText, action: () => window.open('/resume.pdf', '_blank') },
     
     { id: 'link-github', label: 'Open Devansh\'s GitHub Profile', category: 'Socials', icon: Github, action: () => window.open('https://github.com/devansh-dubey', '_blank') },
     { id: 'link-linkedin', label: 'Open Devansh\'s LinkedIn Profile', category: 'Socials', icon: Linkedin, action: () => window.open('https://linkedin.com/in/devansh-dubey-ece', '_blank') },

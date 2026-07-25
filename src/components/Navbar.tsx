@@ -182,8 +182,9 @@ export default function Navbar({ onOpenCmd, onToggleTheme, isDarkMode }: NavbarP
 
               <div className="pt-2 flex flex-col space-y-3">
                 <a
-                  href="#"
-                  onClick={(e) => { e.preventDefault(); alert('Devansh Dubey Resume PDF would be downloaded here.'); }}
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center justify-center space-x-1.5 py-2.5 rounded-xl bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 font-medium text-xs tracking-wide"
                 >
                   <FileText className="h-4 w-4" />
