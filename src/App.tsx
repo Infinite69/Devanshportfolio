@@ -83,14 +83,25 @@ export default function App() {
             isDarkMode={isDarkMode}
           />
 
-          {/* Modular sections restricted to elegant centered ratio */}
-          <main className="relative z-10 max-w-3xl mx-auto px-4 sm:px-8 pb-12 pt-28">
-            <Hero isDarkMode={isDarkMode} />
-            <Projects isDarkMode={isDarkMode} />
-            <Skills isDarkMode={isDarkMode} />
-            <Experience isDarkMode={isDarkMode} />
-            <EducationCertifications isDarkMode={isDarkMode} />
-            <Contact isDarkMode={isDarkMode} />
+          {/* Unified centered ratio card container */}
+          <main className="relative z-10 max-w-3xl mx-auto px-4 sm:px-8 pb-24 pt-20">
+            <div className={`rounded-3xl border p-6 sm:p-10 transition-all duration-300 ${
+              isDarkMode 
+                ? 'bg-[#111111]/90 border-zinc-800/80 shadow-2xl shadow-black/45' 
+                : 'bg-white border-zinc-200/80 shadow-md shadow-zinc-200/40'
+            }`}>
+              <Hero isDarkMode={isDarkMode} />
+              <div className="h-[1px] bg-zinc-200/40 dark:bg-zinc-800/25 my-8" />
+              <Experience isDarkMode={isDarkMode} />
+              <div className="h-[1px] bg-zinc-200/40 dark:bg-zinc-800/25 my-8" />
+              <Projects isDarkMode={isDarkMode} />
+              <div className="h-[1px] bg-zinc-200/40 dark:bg-zinc-800/25 my-8" />
+              <Skills isDarkMode={isDarkMode} />
+              <div className="h-[1px] bg-zinc-200/40 dark:bg-zinc-800/25 my-8" />
+              <EducationCertifications isDarkMode={isDarkMode} />
+              <div className="h-[1px] bg-zinc-200/40 dark:bg-zinc-800/25 my-8" />
+              <Contact isDarkMode={isDarkMode} />
+            </div>
           </main>
 
           {/* Footer controls */}

@@ -59,18 +59,18 @@ export default function Contact({ isDarkMode }: ContactProps) {
     }, 1200);
   };
 
-  const bgStyle = isDarkMode ? 'bg-[#111111]/80 border-zinc-800' : 'bg-white border-zinc-200 shadow-sm';
+  const bgStyle = isDarkMode ? 'bg-zinc-900/20 border-zinc-800/80 shadow-sm' : 'bg-zinc-50/30 border-zinc-200/70 hover:border-zinc-250/90 shadow-sm';
   const inputStyle = isDarkMode 
     ? 'bg-[#161616] border-zinc-800 text-zinc-100 placeholder-zinc-600 focus:border-zinc-700' 
-    : 'bg-zinc-50 border-zinc-200 text-zinc-950 placeholder-zinc-400 focus:border-zinc-300';
+    : 'bg-white border-zinc-200 text-zinc-950 placeholder-zinc-400 focus:border-zinc-300';
 
   return (
-    <section id="contact" className="py-16 relative">
+    <section id="contact" className="py-4 relative">
       
-      {/* Uppercase section title on left */}
-      <div className="text-[10px] font-mono tracking-widest uppercase text-zinc-400 dark:text-zinc-500 mb-8 border-b border-zinc-200/40 dark:border-zinc-800/25 pb-2 text-left">
-        Let's Work Together
-      </div>
+      {/* Bold section title with a trailing dot */}
+      <h2 className="text-lg sm:text-xl font-extrabold font-sans text-zinc-950 dark:text-zinc-50 mb-6 text-left">
+        Let's Connect.
+      </h2>
 
       {/* Two Column cards grid exactly matching Image 3 */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch text-left">

@@ -6,15 +6,13 @@ interface ExperienceProps {
 }
 
 export default function Experience({ isDarkMode }: ExperienceProps) {
-  // Let's render custom tech stack circles for each experience as shown in the screenshot!
-  // In the screenshot there is a row of small circles with logo colors. Let's make custom SVG circles or neat letters.
   const getTechIconsForExperience = (company: string) => {
     if (company.includes('Baxy')) {
       return [
         { name: 'React', color: 'bg-cyan-500/10 text-cyan-400', label: 'R' },
         { name: 'Tailwind', color: 'bg-teal-500/10 text-teal-400', label: 'T' },
         { name: 'Framer', color: 'bg-purple-500/10 text-purple-400', label: 'F' },
-        { name: 'JS', color: 'bg-amber-500/10 text-amber-400', label: 'JS' },
+        { name: 'JS', color: 'bg-amber-500/10 text-amber-450', label: 'JS' },
         { name: 'TS', color: 'bg-blue-500/10 text-blue-400', label: 'TS' }
       ];
     } else {
@@ -22,83 +20,89 @@ export default function Experience({ isDarkMode }: ExperienceProps) {
         { name: 'Premiere', color: 'bg-violet-500/10 text-violet-400', label: 'Pr' },
         { name: 'AfterEffects', color: 'bg-indigo-500/10 text-indigo-400', label: 'Ae' },
         { name: 'Photoshop', color: 'bg-blue-500/10 text-blue-400', label: 'Ps' },
-        { name: 'Illustrator', color: 'bg-amber-500/10 text-amber-400', label: 'Ai' }
+        { name: 'Illustrator', color: 'bg-amber-500/10 text-amber-455', label: 'Ai' }
       ];
     }
   };
 
-  return (
-    <section id="experience" className="py-16 relative text-left">
-      
-      {/* Small grey section uppercase title on the left */}
-      <div className="text-[10px] font-mono tracking-widest uppercase text-zinc-400 dark:text-zinc-500 mb-8 border-b border-zinc-200/40 dark:border-zinc-800/25 pb-2">
-        Experience
+  const renderCompanyLogo = (company: string) => {
+    if (company.toLowerCase().includes('baxy')) {
+      return (
+        <div className="h-10 w-10 rounded-full bg-zinc-950 dark:bg-zinc-100 text-white dark:text-zinc-900 flex items-center justify-center font-extrabold text-sm shrink-0 border border-zinc-800 shadow-sm">
+          B
+        </div>
+      );
+    }
+    if (company.toLowerCase().includes('fiverr')) {
+      return (
+        <div className="h-10 w-10 rounded-full bg-[#1dbf73] text-white flex items-center justify-center font-extrabold text-sm shrink-0 shadow-sm">
+          f
+        </div>
+      );
+    }
+    return (
+      <div className="h-10 w-10 rounded-full bg-zinc-200 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 flex items-center justify-center font-extrabold text-sm shrink-0">
+        {company[0]}
       </div>
+    );
+  };
 
-      {/* Timeline core */}
-      <div className="relative border-l border-zinc-200/60 dark:border-zinc-800/50 pl-6 sm:pl-8 space-y-12">
-        
+  return (
+    <section id="experience" className="py-4 relative text-left">
+      {/* Title block */}
+      <h2 className="text-lg sm:text-xl font-extrabold font-sans text-zinc-950 dark:text-zinc-50 mb-6">
+        Work Experience.
+      </h2>
+
+      {/* Cards list */}
+      <div className="space-y-4">
         {experienceData.map((exp, index) => {
-          const isLatest = index === 0;
           const techIcons = getTechIconsForExperience(exp.company);
+          const combinedDescription = exp.highlights.join(' ');
 
           return (
             <motion.div
               key={exp.id}
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-100px' }}
+              viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative"
+              className={`rounded-2xl p-5 border flex flex-col space-y-4 transition-all ${
+                isDarkMode 
+                  ? 'bg-zinc-900/20 border-zinc-800/80' 
+                  : 'bg-zinc-50/30 border-zinc-200/70 hover:border-zinc-250/90'
+              }`}
             >
-              {/* Green/Turquoise or Grey Bullet Dot exactly as in Image 1 */}
-              <span className="absolute -left-[31px] sm:-left-[39px] top-1 flex h-4 w-4 items-center justify-center rounded-full bg-[#fcfcfc] dark:bg-[#090909]">
-                <span className={`h-2.5 w-2.5 rounded-full ${
-                  isLatest 
-                    ? 'bg-emerald-400 dark:bg-emerald-500 ring-4 ring-emerald-400/20 dark:ring-emerald-500/20' 
-                    : 'bg-zinc-400 dark:bg-zinc-600'
-                }`} />
-              </span>
-
-              {/* Title & Date alignment row */}
-              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-2">
-                <div>
-                  <h3 className="text-base sm:text-lg font-bold font-display text-zinc-950 dark:text-zinc-100 leading-snug">
-                    {exp.role} <span className="text-zinc-600 dark:text-zinc-400 font-normal">· {exp.company}</span>
-                  </h3>
-                  <p className="text-xs text-zinc-700 dark:text-zinc-400 mt-0.5">
-                    Remote, Full-Time
+              {/* Top Row: Logo + details */}
+              <div className="flex items-start space-x-3.5">
+                {renderCompanyLogo(exp.company)}
+                
+                <div className="flex-1 min-w-0">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+                    <h3 className="text-sm sm:text-base font-bold text-zinc-900 dark:text-zinc-50">
+                      {exp.company}
+                    </h3>
+                    <span className="text-[10px] text-zinc-500 dark:text-zinc-400 border border-zinc-200 dark:border-zinc-800/80 px-2.5 py-0.5 rounded-full bg-white dark:bg-zinc-950 font-mono font-medium self-start sm:self-center">
+                      {exp.period}
+                    </span>
+                  </div>
+                  <p className="text-xs font-semibold text-zinc-500 dark:text-zinc-400 mt-0.5">
+                    {exp.role}
                   </p>
                 </div>
-                
-                {/* Period aligned to right */}
-                <span className="text-xs font-mono text-zinc-600 dark:text-zinc-400 whitespace-nowrap self-start sm:self-center">
-                  {exp.period}
-                </span>
               </div>
 
-              {/* Work highlights list */}
-              <div className="space-y-2 mt-4">
-                <p className="text-xs sm:text-sm text-zinc-800 dark:text-zinc-300 font-sans leading-relaxed">
-                  During my time at {exp.company}, I actively spearheaded digital enhancements and modern interfaces:
-                </p>
-                
-                <ul className="space-y-1.5 pl-1">
-                  {exp.highlights.map((highlight, hIdx) => (
-                    <li key={hIdx} className="text-xs sm:text-sm text-zinc-800 dark:text-zinc-400 leading-relaxed font-sans flex items-start space-x-2">
-                      <span className="text-zinc-650 dark:text-zinc-500 mt-0.5 select-none">•</span>
-                      <span>{highlight}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              {/* Description */}
+              <p className="text-xs sm:text-sm text-zinc-700 dark:text-zinc-350 font-sans leading-relaxed pl-1 sm:pl-13 select-text">
+                {combinedDescription}
+              </p>
 
-              {/* Tech Stack badges row below the highlights exactly matching image 1 */}
-              <div className="flex items-center space-x-2 mt-4 pt-1">
+              {/* Tech Stack Icons */}
+              <div className="flex items-center space-x-2 pt-1 pl-1 sm:pl-13">
                 {techIcons.map((tech, tIdx) => (
                   <div
                     key={tIdx}
-                    className={`h-6 w-6 rounded-full flex items-center justify-center font-mono text-[9px] font-bold ${tech.color} shadow-sm border border-zinc-200/20 dark:border-zinc-800/20`}
+                    className={`h-6 w-6 rounded-full flex items-center justify-center font-mono text-[9px] font-bold ${tech.color} shadow-sm border border-zinc-200/20 dark:border-zinc-850`}
                     title={tech.name}
                   >
                     {tech.label}
@@ -109,7 +113,6 @@ export default function Experience({ isDarkMode }: ExperienceProps) {
             </motion.div>
           );
         })}
-
       </div>
     </section>
   );

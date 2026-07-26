@@ -230,12 +230,12 @@ export default function Projects({ isDarkMode }: ProjectsProps) {
   });
 
   return (
-    <section id="projects" className="py-16 relative">
+    <section id="projects" className="py-4 relative text-left">
       
-      {/* Uppercase Section Title on Left (Siddharth Meena ratio design style) */}
-      <div className="text-[10px] font-mono tracking-widest uppercase text-zinc-400 dark:text-zinc-500 mb-8 border-b border-zinc-200/40 dark:border-zinc-800/25 pb-2">
-        Selected Projects
-      </div>
+      {/* Bold section title with a trailing dot */}
+      <h2 className="text-lg sm:text-xl font-extrabold font-sans text-zinc-950 dark:text-zinc-50 mb-6">
+        Selected Projects.
+      </h2>
 
       {/* Quick Stack Filter list inside of a clean list row */}
       <div className="flex flex-wrap gap-2 mb-10 text-xs">

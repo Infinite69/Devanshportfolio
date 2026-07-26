@@ -56,27 +56,27 @@ export default function Skills({ isDarkMode }: SkillsProps) {
   ];
 
   const cardBg = isDarkMode 
-    ? 'bg-[#09090b] border-zinc-900 shadow-xl' 
-    : 'bg-white border-zinc-200 shadow-md shadow-zinc-100/50';
+    ? 'bg-zinc-900/20 border-zinc-800/80 shadow-sm' 
+    : 'bg-zinc-50/30 border-zinc-200/70 hover:border-zinc-250/90 shadow-sm';
 
   const pillBg = isDarkMode
     ? 'bg-[#18181b] border-zinc-800 text-zinc-300 hover:bg-[#27272a] hover:text-white hover:border-zinc-700'
     : 'bg-zinc-100 border-zinc-200 text-zinc-700 hover:bg-zinc-200 hover:text-zinc-950 hover:border-zinc-300';
 
   return (
-    <section id="skills" className="py-12 relative text-left">
+    <section id="skills" className="py-4 relative text-left">
       
-      {/* Uppercase section category text */}
-      <div className="text-[10px] font-mono tracking-widest uppercase text-zinc-400 dark:text-zinc-500 mb-6 border-b border-zinc-200/40 dark:border-zinc-800/25 pb-2">
-        Expertise & Stack
-      </div>
+      {/* Bold section title with a trailing dot */}
+      <h2 className="text-lg sm:text-xl font-extrabold font-sans text-zinc-950 dark:text-zinc-50 mb-6">
+        Expertise & Stack.
+      </h2>
 
       {/* Main Container Card styled exactly like Screenshot 2 */}
       <div className={`rounded-2xl p-6 border transition-all duration-300 ${cardBg}`}>
         
         {/* Header line inside the box */}
         <div className="flex items-center justify-between mb-6">
-          <h3 className="font-display font-extrabold text-xl text-zinc-950 dark:text-white">
+          <h3 className="font-sans font-bold text-sm text-zinc-800 dark:text-zinc-205">
             Skills
           </h3>
           <span className="text-xs text-zinc-500 dark:text-zinc-400 font-mono flex items-center space-x-1">

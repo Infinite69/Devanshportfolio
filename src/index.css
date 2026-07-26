@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --brand-bg: #fcfcfc;
+  --brand-bg: #fafafa;
   --brand-card: #ffffff;
   --brand-border: rgba(9, 9, 9, 0.08);
   --brand-primary: #000000;
@@ -10,7 +12,7 @@
   --brand-text: #090909;
   --brand-muted: #71717a;
   
-  --grid-color: rgba(9, 9, 9, 0.03);
+  --grid-color: rgba(9, 9, 9, 0.05);
   --glass-bg: rgba(255, 255, 255, 0.7);
   --glass-border: rgba(9, 9, 9, 0.08);
   --selection-bg: rgba(9, 9, 9, 0.1);
@@ -86,6 +88,10 @@ html {
 
 body {
   background-color: var(--brand-bg);
+  background-image: 
+    linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+  background-size: 32px 32px;
   color: var(--brand-text);
   font-family: var(--font-sans);
   overflow-x: hidden;

@@ -8,12 +8,12 @@ interface EducationCertificationsProps {
 
 export default function EducationCertifications({ isDarkMode }: EducationCertificationsProps) {
   return (
-    <section id="education-certifications" className="py-16 relative">
+    <section id="education-certifications" className="py-4 relative">
       
-      {/* Uppercase Section Title on Left */}
-      <div className="text-[10px] font-mono tracking-widest uppercase text-zinc-400 dark:text-zinc-500 mb-8 border-b border-zinc-200/40 dark:border-zinc-800/25 pb-2 text-left">
-        Education & Credentials
-      </div>
+      {/* Bold section title with a trailing dot */}
+      <h2 className="text-lg sm:text-xl font-extrabold font-sans text-zinc-950 dark:text-zinc-50 mb-6 text-left">
+        Education & Credentials.
+      </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
         
@@ -24,8 +24,8 @@ export default function EducationCertifications({ isDarkMode }: EducationCertifi
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-50px' }}
             transition={{ duration: 0.5 }}
-            className={`rounded-2xl p-6 border flex-1 ${
-              isDarkMode ? 'bg-[#111111]/80 border-zinc-800' : 'bg-white border-zinc-200 shadow-sm'
+            className={`rounded-2xl p-6 border flex-1 transition-all ${
+              isDarkMode ? 'bg-zinc-900/20 border-zinc-800/80' : 'bg-zinc-50/30 border-zinc-200/70 hover:border-zinc-250/90'
             } flex flex-col justify-between`}
           >
             <div className="space-y-4">
@@ -66,8 +66,8 @@ export default function EducationCertifications({ isDarkMode }: EducationCertifi
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-50px' }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className={`rounded-2xl p-6 border flex-1 ${
-              isDarkMode ? 'bg-[#111111]/80 border-zinc-800' : 'bg-white border-zinc-200 shadow-sm'
+            className={`rounded-2xl p-6 border flex-1 transition-all ${
+              isDarkMode ? 'bg-zinc-900/20 border-zinc-800/80' : 'bg-zinc-50/30 border-zinc-200/70 hover:border-zinc-250/90'
             } flex flex-col justify-between`}
           >
             <div className="space-y-4">
